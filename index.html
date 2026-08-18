@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hair Promo - Promoções para Cabelos</title>
+
+    <title>Vida Marinha</title>
 
     <style>
         * {
@@ -13,174 +14,189 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f5ff;
-            color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4fbff;
+            color: #123;
         }
 
+        /* MENU */
         header {
-            background-color: #6c2bd9;
+            background: #073b5c;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             color: white;
-            padding: 25px;
-            text-align: center;
         }
 
-        header h1 {
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
-
-        header p {
-            font-size: 17px;
-        }
-
-        nav {
-            background-color: #4d1da8;
-            text-align: center;
-            padding: 12px;
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            margin-left: 25px;
+            font-size: 16px;
         }
 
         nav a:hover {
-            color: #e5d5ff;
+            color: #4dd9ff;
         }
 
+        /* BANNER */
         .banner {
-            background-color: #eadfff;
-            text-align: center;
-            padding: 45px 20px;
-        }
-
-        .banner h2 {
-            color: #5a20b5;
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-
-        .banner p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .botao {
-            display: inline-block;
-            background-color: #6c2bd9;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .botao:hover {
-            background-color: #4d1da8;
-        }
-
-        .produtos {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .produtos h2 {
-            text-align: center;
-            color: #5a20b5;
-            margin-bottom: 30px;
-        }
-
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            background-color: white;
-            width: 250px;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-        }
-
-        .card .imagem {
-            background-color: #eee4ff;
-            height: 150px;
-            border-radius: 8px;
+            min-height: 430px;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(rgba(0, 50, 90, 0.55), rgba(0, 30, 70, 0.7)),
+                url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .banner h1 {
             font-size: 55px;
             margin-bottom: 15px;
         }
 
-        .card h3 {
-            color: #4d1da8;
-            margin-bottom: 10px;
-        }
-
-        .preco-antigo {
-            color: #888;
-            text-decoration: line-through;
-            font-size: 14px;
-        }
-
-        .preco {
-            color: #e53935;
-            font-size: 23px;
-            font-weight: bold;
-            margin: 8px 0 15px;
-        }
-
-        .desconto {
-            background-color: #ffdddd;
-            color: #d32f2f;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        .sobre {
-            background-color: #ffffff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .sobre h2 {
-            color: #5a20b5;
-            margin-bottom: 15px;
-        }
-
-        .sobre p {
+        .banner p {
+            font-size: 21px;
             max-width: 700px;
             margin: auto;
-            line-height: 1.6;
         }
 
+        /* CONTEÚDO */
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: #075985;
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-left: 6px solid #13b8d6;
+            padding-left: 12px;
+        }
+
+        .texto {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 50, 80, 0.12);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: #075985;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #456;
+        }
+
+        /* CURIOSIDADES */
+        .curiosidades {
+            background: #dff7ff;
+            padding: 35px;
+            border-radius: 15px;
+        }
+
+        .curiosidades ul {
+            padding-left: 25px;
+        }
+
+        .curiosidades li {
+            margin-bottom: 15px;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        /* CONSERVAÇÃO */
+        .conservacao {
+            background: #075985;
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .conservacao h2 {
+            color: white;
+            border-color: #4dd9ff;
+        }
+
+        /* RODAPÉ */
         footer {
-            background-color: #4d1da8;
+            background: #052c44;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 30px 20px;
         }
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 26px;
+        footer p {
+            margin: 7px;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
             }
 
             nav a {
-                margin: 0 7px;
-                font-size: 14px;
+                margin: 0 8px;
+            }
+
+            .banner h1 {
+                font-size: 40px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -188,80 +204,194 @@
 
 <body>
 
+    <!-- MENU -->
     <header>
-        <h1>💜 Hair Promo</h1>
-        <p>As melhores promoções para cuidar dos seus cabelos!</p>
+        <div class="logo">🌊 Vida Marinha</div>
+
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#animais">Animais</a>
+            <a href="#curiosidades">Curiosidades</a>
+            <a href="#conservacao">Conservação</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#inicio">Início</a>
-        <a href="#promocoes">Promoções</a>
-        <a href="#sobre">Sobre</a>
-    </nav>
 
-    <section class="banner" id="inicio">
-        <h2>🔥 Promoções da Semana!</h2>
-        <p>Encontre produtos incríveis para deixar seu cabelo ainda mais bonito.</p>
-        <a href="#promocoes" class="botao">Ver promoções</a>
-    </section>
+    <!-- BANNER PRINCIPAL -->
+    <section class="banner">
+        <div>
+            <h1>Vida Marinha</h1>
 
-    <section class="produtos" id="promocoes">
-        <h2>Produtos em Promoção</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <div class="imagem">🧴</div>
-                <h3>Shampoo Hidratante</h3>
-                <span class="desconto">30% OFF</span>
-                <p class="preco-antigo">R$ 29,90</p>
-                <p class="preco">R$ 20,90</p>
-                <a href="#" class="botao">Comprar</a>
-            </div>
-
-            <div class="card">
-                <div class="imagem">🧴</div>
-                <h3>Máscara de Hidratação</h3>
-                <span class="desconto">25% OFF</span>
-                <p class="preco-antigo">R$ 39,90</p>
-                <p class="preco">R$ 29,90</p>
-                <a href="#" class="botao">Comprar</a>
-            </div>
-
-            <div class="card">
-                <div class="imagem">💆</div>
-                <h3>Creme para Pentear</h3>
-                <span class="desconto">20% OFF</span>
-                <p class="preco-antigo">R$ 24,90</p>
-                <p class="preco">R$ 19,90</p>
-                <a href="#" class="botao">Comprar</a>
-            </div>
-
-            <div class="card">
-                <div class="imagem">✨</div>
-                <h3>Óleo Capilar</h3>
-                <span class="desconto">35% OFF</span>
-                <p class="preco-antigo">R$ 34,90</p>
-                <p class="preco">R$ 22,90</p>
-                <a href="#" class="botao">Comprar</a>
-            </div>
-
+            <p>
+                Descubra a incrível diversidade dos oceanos
+                e conheça alguns dos animais que vivem nesse
+                fascinante mundo subaquático.
+            </p>
         </div>
     </section>
 
-    <section class="sobre" id="sobre">
-        <h2>Sobre o Hair Promo</h2>
-        <p>
-            O Hair Promo é um projeto escolar criado para apresentar
-            promoções de produtos para cabelos. Nosso objetivo é reunir
-            produtos de diferentes tipos em um site simples, organizado
-            e fácil de navegar.
-        </p>
-    </section>
 
+    <main>
+
+        <!-- SOBRE -->
+        <section id="sobre">
+            <h2>🌎 O que é a vida marinha?</h2>
+
+            <p class="texto">
+                A vida marinha é formada por todos os seres vivos que
+                habitam os mares e oceanos do planeta. Ela inclui
+                animais, plantas, algas, corais, bactérias e muitos
+                outros organismos.
+            </p>
+
+            <br>
+
+            <p class="texto">
+                Os oceanos ocupam grande parte da superfície da Terra
+                e são fundamentais para o equilíbrio do planeta.
+                Além de abrigarem milhares de espécies, eles ajudam
+                a regular o clima e participam da produção de oxigênio.
+            </p>
+        </section>
+
+
+        <!-- ANIMAIS -->
+        <section id="animais">
+            <h2>🐠 Animais do mar</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <img
+                        src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
+                        alt="Oceano">
+                    
+                    <div class="card-content">
+                        <h3>🐋 Baleia</h3>
+
+                        <p>
+                            As baleias são alguns dos maiores animais
+                            existentes no planeta. Apesar do enorme
+                            tamanho, alimentam-se principalmente de
+                            pequenos organismos, dependendo da espécie.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img
+                        src="https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&w=800&q=80"
+                        alt="Tartaruga marinha">
+
+                    <div class="card-content">
+                        <h3>🐢 Tartaruga-marinha</h3>
+
+                        <p>
+                            As tartarugas marinhas passam grande parte
+                            da vida no oceano. Elas são importantes para
+                            os ecossistemas marinhos e enfrentam ameaças
+                            como a poluição e a pesca.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img
+                        src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=800&q=80"
+                        alt="Peixes no oceano">
+
+                    <div class="card-content">
+                        <h3>🐟 Peixes</h3>
+
+                        <p>
+                            Existem milhares de espécies de peixes
+                            marinhos. Eles apresentam diferentes formas,
+                            cores e tamanhos e vivem em praticamente
+                            todas as regiões dos oceanos.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CURIOSIDADES -->
+        <section id="curiosidades">
+            <h2>💡 Curiosidades sobre os oceanos</h2>
+
+            <div class="curiosidades">
+
+                <ul>
+                    <li>
+                        🌊 Os oceanos cobrem aproximadamente 71% da
+                        superfície da Terra.
+                    </li>
+
+                    <li>
+                        🐙 O polvo possui três corações.
+                    </li>
+
+                    <li>
+                        🐬 Golfinhos são mamíferos, mesmo vivendo na água.
+                    </li>
+
+                    <li>
+                        🪸 Os recifes de coral são importantes habitats
+                        para diversas espécies marinhas.
+                    </li>
+
+                    <li>
+                        🌎 Os oceanos desempenham um papel fundamental
+                        na regulação do clima da Terra.
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+
+        <!-- CONSERVAÇÃO -->
+        <section id="conservacao" class="conservacao">
+
+            <h2>♻️ Como proteger a vida marinha?</h2>
+
+            <p class="texto">
+                A preservação dos oceanos depende das atitudes de todos.
+                Podemos ajudar reduzindo o uso de plástico descartável,
+                evitando jogar lixo em rios e praias, economizando água
+                e apoiando projetos de conservação.
+            </p>
+
+            <br>
+
+            <p class="texto">
+                Cuidar dos oceanos significa proteger milhares de
+                espécies e também garantir um planeta mais saudável
+                para as próximas gerações.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
     <footer>
-        <p>© 2026 Hair Promo - Projeto Escolar</p>
-        <p>Feito com 💜 para o trabalho de escola</p>
+
+        <p><strong>🌊 Vida Marinha</strong></p>
+
+        <p>
+            Trabalho escolar sobre a importância dos oceanos
+            e dos seres vivos que neles habitam.
+        </p>
+
+        <p>
+            © 2026 - Projeto escolar
+        </p>
+
     </footer>
 
 </body>
